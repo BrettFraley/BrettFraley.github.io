@@ -3,27 +3,8 @@ layout: page
 title: About
 permalink: /about/
 ---
+With 8 years of professional experience as a software engineer, I have worked with various technologies on both small and massive, mission-critical software products and services.
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+In the last year, I discovered the world of healthcare IT, and I am excited about the future of technology in this evolving industry. As a highly experienced software engineer with only basic knowledge in biology, biochemistry, and genomics, I have been taking MOOC courses in health informatics systems and bioinformatics.
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
-
-## Features
-
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
-
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+I am currently working towards earning a CAHIMS certification and am also looking to contribute to open-source bioinformatics projects. Additionally, I am interested in volunteer or entry-level positions for any organization seeking software talent to aid in their bioinformatics research or products.
