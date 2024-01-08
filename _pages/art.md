@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /brett-fraley-color-pencil-art/
+permalink: /art/
 ---
 
 #### My Awesome Adult Coloring Book Art
