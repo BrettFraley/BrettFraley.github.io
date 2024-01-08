@@ -4,17 +4,19 @@ title: Fastest, Easiest, No BS Github Blog Setup!
 categories: Web Development
 ---
 
-### On The Reverie Jekyll Theme, Github Pages
+##### **On The Reverie Jekyll Theme, Github Pages**
 
 Check it out, I'm a software engineer. I love to code, 
 design user interfaces, setup and automate development
 environments, learn new languages, frameworks,
-and tools. But, did I feel like relearning Jekyll, setting
+and tools. 
+
+That said, did I feel like relearning Jekyll, setting
 up a local Ruby environment, altering themes and debugging
-the initial theme's CSS today? ***Absolutely not!***
+the initial theme's CSS today? **Absolutely not!**
 
 The most straight forward and fastest way to start
-my new personal site today (this site) in less than 30 minutes
+a new personal site today (this site) in less than 30 minutes
 was using [this free Reverie Jekyll theme](https://github.com/amitmerchant1990/reverie).
 
 It's 2024! I have too many projects and work to focus on
