@@ -12,5 +12,5 @@ package.json
 .jekyll-cache
 vendor
 
-_includes/easter-eggs.js
+# _includes/easter-eggs.js
 .eggs
