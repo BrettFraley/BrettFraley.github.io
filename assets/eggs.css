@@ -1,5 +1,5 @@
 .landing_1 {
-    letter-spacing: .25m;
+    letter-spacing: .25em;
     transition: letter-spacing font-family ease-out 60ms;
     transition-duration: 1s;
     font-family: monospace;
