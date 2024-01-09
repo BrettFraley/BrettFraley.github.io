@@ -11,3 +11,6 @@ package.json
 *.gemspec
 .jekyll-cache
 vendor
+
+_includes/easter-eggs.js
+.eggs

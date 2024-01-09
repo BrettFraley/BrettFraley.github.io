@@ -1,0 +1,54 @@
+Eggs move, and only turn on certain times of day
+Eggs have a difficulty level
+Some eggs are invisible and either code or network based
+Some eggs may exist off of the site, but there's a path to them
+
+ACGT - DNA String
+ACGU - RNA String
+-------------------------
+Transcribing DNA into RNA
+-------------------------
+An RNA string is a string formed from the alphabet containing 'A', 'C', 'G', and 'U'.
+
+Given a DNA string t
+corresponding to a coding strand, its transcribed RNA string U
+is formed by replacing all occurrences of 'T' in t with 'U' in U.
+ACGU
+
+-----------------------------
+Complementing a Strand of DNA
+-----------------------------
+In DNA strings, symbols 'A' and 'T' are complements of each other, as are 'C' and 'G'.
+
+The reverse complement of a DNA string s
+is the string sc formed by reversing the symbols of s,
+then taking the complement of each symbol (e.g., the reverse complement of "GTCA" is "TGAC").
+
+AAAACCCGGT = ACCGGGTTTT
+
+
+
+const strandLength = 64
+
+let DNA = ['A', 'C', 'G', 'T']
+let RNA = ['A', 'C', 'G', 'U']
+
+const genStrand = chars => {
+  let strand = ""
+  for (i = 0; i < strandLength; i++) {
+    let char = Math.floor(Math.random()*4)
+    strand += chars[char]
+  }
+  return strand
+}
+
+an initial egg player / seeker upon finding the first egg
+posts to SQLite a new table with a table name generated 
+from their first egg id. Once they find the first egg, ids for the
+rest of the eggs are generated as well and stored as rows in their table.
+This way, table names and each row of each table will collectively be unique
+and verified.. If a table id or table id with mismatched rows are tampered with,
+then there table is reset. This can be done with python anywhere and bottle,
+or some free server. The users local storage and or SQLite in browser storage
+can be synced and verified in this way.
+
