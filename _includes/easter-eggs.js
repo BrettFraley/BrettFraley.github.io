@@ -20,10 +20,6 @@
  * elements with ids
  */
 
-const presentations = {
-    
-}
-
 const settings = {
     strandLength: 64,
     eggCount: 12,
@@ -52,16 +48,20 @@ const eggHandler = {
     setEgg:  el => el.setAttribute('egg', newStrand(settings.DNA))
 }
 
-const landingPage = () => {
-    let egg = easterEggElements.headerSoftwareEngineer()
+const landingPage = {
 
-    egg.addEventListener('mouseover', () => {
-        eggHandler.setEgg(egg)
-        egg.classList.add('landing_1')
-    }, false )
+    init: () => {
+        let egg = easterEggElements.headerSoftwareEngineer()
 
-    egg.addEventListener('mouseout', () => {
-        egg.classList.remove('landing_1')
-    }, false )
+        egg.addEventListener('mouseover', () => {
+            eggHandler.setEgg(egg)
+            egg.classList.add('landing_1')
+        }, false )
 
+        egg.addEventListener('mouseout', () => {
+            egg.classList.remove('landing_1')
+        }, false )
+    }
 }
+
+landingPage().init()
