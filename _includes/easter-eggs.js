@@ -1,3 +1,4 @@
+<script>
 /**
  * If you've discovered this file, then you have unlocked the secrets to
  * finding all of the easter eggs!
@@ -13,18 +14,18 @@
  * Brett
  */
 
-/**
- * Easter egg elements
- * Note: specific class names are used when IDs should be,
- * but then one could more easily find all eggs by browsing
- * elements with ids
- */
-
 const settings = {
     strandLength: 64,
     eggCount: 12,
     DNA: ['A', 'C', 'G', 'T'],
     RNA: ['A', 'C', 'G', 'U'],
+}
+
+const eggUtils = {
+    storSet: (k, v) => localStorage.setItem(k, v),
+    storGet: k => localStorage.getItem(k),
+    storRem: k => localStorage.removeItem(k),
+    // storCheck
 }
 
 const genStrand = chars => {
@@ -39,7 +40,9 @@ const genStrand = chars => {
 const newStrand = bases => genStrand(bases)
 
 const easterEggElements = {
-    headerSoftwareEngineer: () => document.getElementsByClassName('site-description')[0]
+    eggGameInit: () => document.getElementById('egg-game-init-hide'),
+    playerInitButton: () => document.getElementById('player-init'),
+    headerSoftwareEngineer: () => document.getElementsByClassName('header-tagline')[0]
 }
 
 const eggHandler = {
@@ -49,19 +52,32 @@ const eggHandler = {
 }
 
 const landingPage = {
-
+    // On init, need to know which eggs have already been found or not,
+    // as to not add events to them
     init: () => {
-        let egg = easterEggElements.headerSoftwareEngineer()
+        let egg = easterEggElements.headerSoftwareEngineer()            // egg 1
+        let eggPres1 = easterEggElements.eggGameInit()                  // presentation 1
+        let playerInitButton = easterEggElements.playerInitButton()    // accept egg 1 button
 
         egg.addEventListener('mouseover', () => {
+            egg.id = 'landing_1_active'
             eggHandler.setEgg(egg)
-            egg.classList.add('landing_1')
+            eggPres1.id='egg-game-init-show'
         }, false )
 
-        egg.addEventListener('mouseout', () => {
-            egg.classList.remove('landing_1')
-        }, false )
+        playerInitButton.addEventListener('click', () => {
+            egg.id = 'landing_1_inactive'
+            eggPres1.id='egg-game-init-hide'
+        }, false)
+
+
+
+        // egg.addEventListener('mouseout', () => {
+        //     egg.id = 'landing_1_inactive'
+        // }, false )
     }
 }
 
-landingPage().init()
+landingPage.init()
+
+</script>

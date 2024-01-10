@@ -1,6 +1,39 @@
-.landing_1 {
-    letter-spacing: .25em;
-    transition: letter-spacing font-family ease-out 60ms;
+.header-tagline {
+    padding: 3px;
+    border-radius: 5px;
+}
+
+#egg-game-init-show {
+    transition: all ease 60ms;
+    transition-duration: .75s;
+    font-size:inherit;
+    opacity:1;
+    background-color:#333;
+    color: #eee;
+    padding: 15px;
+    border-radius: 3px;
+}
+
+#egg-game-init-hide {
+    transition: all 10ms;
+    transition-duration: .5s;
+    font-size:0px;
+    opacity:0;
+    height:0;
+}
+
+#landing_1_active {
+    letter-spacing: .15em;
+    transition: all ease 60ms;
     transition-duration: 1s;
     font-family: monospace;
+    color: lime;
+    background-color: #222;
+}
+
+#landing_1_inactive {
+    letter-spacing: inherit;
+    transition: all ease 600ms;
+    transition-duration: 1s;
+    font-family: inherit;
 }
