@@ -1,30 +1,83 @@
+.wrapper-main {
+    margin-top: -25px;
+}
+
+
 .header-tagline {
-    padding: 3px;
+    padding: 5px;
     border-radius: 5px;
 }
+
+.header-tagline:hover {
+    cursor: help;
+}
+
+.player-init {
+    position: relative;
+    bottom: 10;
+}
+
+/*  Note: these show/hide transitions to
+ *  avoid sudden page reflow or content immediately
+ *  snapping are tricky. There's 50 ways to hack this
+ *  out and none of them are nice.
+ */
+
+.presentation {
+    text-align: center;
+    border-radius: 25px;
+    padding: 20px;
+    font-size: larger;
+    background-color: #000;
+    color: #eee;
+    min-height: 386px;
+    transition: height ease 20ms;
+    transition-duration: .25;
+    width:75%;
+    margin: auto;
+}
+
+.presentation button {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background-color: #000;
+    color: #008fcc;
+    opacity: .7;
+}
+
+.presentation button:hover {
+    opacity: 1;
+    border-color: #008fcc;
+}
+
+
 
 #egg-game-init-show {
     transition: all ease 60ms;
     transition-duration: .75s;
-    font-size:inherit;
-    opacity:1;
-    background-color:#333;
+    font-size: inherit;
+    opacity: 1;
     color: #eee;
-    padding: 15px;
     border-radius: 3px;
 }
 
 #egg-game-init-hide {
-    transition: all 10ms;
+    transition: opacity height ease 60ms;
     transition-duration: .5s;
-    font-size:0px;
-    opacity:0;
-    height:0;
+    font-size: 0px;
+    opacity: 0;
+    min-height: 0;
+    max-height: 0;
+    height: 0;
+    color: #fff;
+    background-color: #fff;
+    padding: 0;
 }
 
 #landing_1_active {
     letter-spacing: .15em;
-    transition: all ease 60ms;
+    transition: letter-spacing ease 60ms;
     transition-duration: 1s;
     font-family: monospace;
     color: lime;
@@ -33,7 +86,10 @@
 
 #landing_1_inactive {
     letter-spacing: inherit;
-    transition: all ease 600ms;
+    transition: letter-spacing ease 60ms;
     transition-duration: 1s;
     font-family: inherit;
+    color: inherit;
+    background-color: inherit;
+    border-radius: inherit;
 }

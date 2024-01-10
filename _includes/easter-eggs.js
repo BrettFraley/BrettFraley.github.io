@@ -14,18 +14,53 @@
  * Brett
  */
 
+
+
+/**
+  Content
+ */
+const content = {
+    pres1: [
+        'My website has hidden easter eggs throughout it!',
+        'You have unlocked Level 1 of the game!',
+        'Level 1 contains a dozen hidden eggs throughout the site.',
+        'The game description and rules are posted here.',
+    ]
+}
+
+
+
+/*
+ * Misc Utils
+*/
+
+const utils = {
+    // Returns a Promise that resolves after "ms" Milliseconds
+    timer: ms => new Promise(res => setTimeout(res, ms)),
+
+}
+
+/** Dom and browser specific utils */
+const dom = {
+
+    // Element Lookup
+    byId:    id => document.getElementById(id),
+    byClass: className => document.getElementsByClassName(className),
+    hasAttr: (el, attrName) => el.hasOwnProperty(attrName),
+    setAttr: (el, name, val) => el.setAttribute(name, val),
+
+    // Local Storage
+    storSet: (k, v) => localStorage.setItem(k, v),
+    storGet: k => localStorage.getItem(k),
+    storRem: k => localStorage.removeItem(k),
+}
+
 const settings = {
+    devMode: true,
     strandLength: 64,
     eggCount: 12,
     DNA: ['A', 'C', 'G', 'T'],
     RNA: ['A', 'C', 'G', 'U'],
-}
-
-const eggUtils = {
-    storSet: (k, v) => localStorage.setItem(k, v),
-    storGet: k => localStorage.getItem(k),
-    storRem: k => localStorage.removeItem(k),
-    // storCheck
 }
 
 const genStrand = chars => {
@@ -40,42 +75,114 @@ const genStrand = chars => {
 const newStrand = bases => genStrand(bases)
 
 const easterEggElements = {
-    eggGameInit: () => document.getElementById('egg-game-init-hide'),
-    playerInitButton: () => document.getElementById('player-init'),
-    headerSoftwareEngineer: () => document.getElementsByClassName('header-tagline')[0]
+    eggGameInit: () => dom.byId('egg-game-init-hide'),
+    playerInitButton: () => dom.byId('player-init'),
+    headerSoftwareEngineer: () => dom.byClass('header-tagline')[0]
 }
 
 const eggHandler = {
-    hasAttr: (el, attrName) => el.hasOwnProperty(attrName),
-    setAttr: (el, name, val) => el.setAttribute(name, val),
-    setEgg:  el => el.setAttribute('egg', newStrand(settings.DNA))
+    setEgg: (el, baseType) => dom.setAttr(el, 'eggId', newStrand(settings.DNA)),
+    storeEgg: (num, id) => dom.storSet(`egg_${num}`, id)
+}
+
+// Word scramble effect for fun
+const scrambler = (chars, count) => {
+    let result = chars.split("")
+
+    let lastIndex = chars.length - count
+    let first = result[count]
+    let last = result[lastIndex]
+
+    result[count] = last
+    result[lastIndex] = first
+
+    return result.join("")
 }
 
 const landingPage = {
+
     // On init, need to know which eggs have already been found or not,
     // as to not add events to them
+
     init: () => {
         let egg = easterEggElements.headerSoftwareEngineer()            // egg 1
         let eggPres1 = easterEggElements.eggGameInit()                  // presentation 1
         let playerInitButton = easterEggElements.playerInitButton()    // accept egg 1 button
 
-        egg.addEventListener('mouseover', () => {
-            egg.id = 'landing_1_active'
-            eggHandler.setEgg(egg)
-            eggPres1.id='egg-game-init-show'
-        }, false )
+        // This all is only for egg 1 on the landing page,
+        // so the trick will be to elegantly apply a pattern to
+        // different egg target types, actions, triggered etc.
 
-        playerInitButton.addEventListener('click', () => {
-            egg.id = 'landing_1_inactive'
-            eggPres1.id='egg-game-init-hide'
+        egg.addEventListener('click', () => {
+
+            egg.id = 'landing_1_active'
+            eggHandler.setEgg(egg, settings.DNA)
+            eggHandler.storeEgg(1, egg.getAttribute('eggId'))
+            eggPres1.id = 'egg-game-init-show'
+
+            // Landing scrambler thing :)
+            let count = 0
+
+            setInterval(() => {
+                let text = egg.innerHTML
+                count  > text.length ? count = 0 : count += 1
+                egg.id === 'landing_1_active' ? egg.innerHTML = scrambler(text, count) : false
+            },100)
+
+            // TODO: Do all this in one iteration of the lines area for Egg 1 Presentation
+            let line1 = dom.byId('pres1-line1')
+            let line2 = dom.byId('pres1-line2')
+            let line3 = dom.byId('pres1-line3')
+            let line4 = dom.byId('pres1-line4')
+
+            let contentLine1 = content.pres1[0].split("")
+            let contentLine2 = content.pres1[1].split("")
+            let contentLine3 = content.pres1[2].split("")
+            let contentLine4 = content.pres1[3].split("")
+
+            async function writer() {
+                for (var i = 0; i < contentLine1.length; i++) {
+                    line1.innerHTML += contentLine1[i]
+                    await utils.timer(50);
+                }
+                for (var i = 0; i < contentLine2.length; i++) {
+                    line2.innerHTML += contentLine2[i]
+                    await utils.timer(50);
+                }
+                for (var i = 0; i < contentLine3.length; i++) {
+                    line3.innerHTML += contentLine3[i]
+                    await utils.timer(50);
+                }
+                for (var i = 0; i < contentLine4.length; i++) {
+                    line4.innerHTML += contentLine4[i]
+                    await utils.timer(50);
+                }
+            }
+
+            writer()
+
+
         }, false)
 
+        playerInitButton.addEventListener('click', () => {
+            // @devMode
+            if (!settings.devMode) {
+                playerInitButton.style.display = 'none'
+            }
+            egg.innerHTML = 'Software Engineer'
+            egg.id = 'landing_1_inactive'
+            eggPres1.id = 'egg-game-init-hide'
 
+        }, false)
+    },
 
-        // egg.addEventListener('mouseout', () => {
-        //     egg.id = 'landing_1_inactive'
-        // }, false )
+    player: {
+        eggsFound: 0,
     }
+
+
+
+
 }
 
 landingPage.init()
