@@ -12,5 +12,12 @@ package.json
 .jekyll-cache
 vendor
 
-# _includes/easter-eggs.js
+# comment out easter-egg.js ince obfuscated for github :) looking at you git history!
+_includes/easter-eggs.js
+_includes/.eggs
 .eggs
+
+# Kate Swap Files #
+.*.kate-swp
+.swp.*
+
