@@ -5,7 +5,7 @@ title: Writing, On Writing
 categories: [Writing, Journal, Misc, Not So Nice Guides]
 ---
 
-I discovered and am acting on something very important to me that I am sending off
+I am acting on something very important to me that I am sending off
 into the ether in a brain dump here today.
 
 I realized that somewhere over the years I lost the flare and
@@ -41,26 +41,27 @@ I'll learn by editing them. I'll even publish my mistakes. Many of which, I
 won't entirely realize or be aware that they are mistakes until I share them with others.
 
 If I write a bad song, like the worst song in history, I will never know I wrote the worst song
-in ever made unless I shed my skin and put my work out there for others. Then when they're like,
-"nah man, um dude that really is the worst song ever". What is important in this scenario
-is that I wrote the song. I created and produced something. I wasn't scared to give it a shot,
-and then improve iteratively.
+ever made unless I shed my skin and put my work out there for others. Then when they're like,
+"nah man, dude that really is the worst song ever!", what's important is that I wrote the song.
+I got it done. I created and produced something. I wasn't scared to give it a shot, get feedback,
+and improve iteratively.
 
-What's important is to not be scared to put yourself, or ego on the line. Let's say I did manage
+What's important is to not be scared to put yourself or ego on the line. Let's say I did manage
 to produce the most god awful musical arrangement of notes, chords, melodies, and instruments
 that mankind has ever heard. I had the time to do so because I wasn't reading a book or following
-a step by step tutorial on music theory or songwriting, which yes would help if such a song was __that__ bad.
+a step by step tutorial on music theory or songwriting. Which, of course would help in the case of
+such a song being _that_ bad.
 
 One can only hinder their own creativity, productivity, and the learning process—specifically,
 the ability to produce, get things done, and learn from mistakes and issues within their work—
 by constantly wondering what others may think, how the pros do it 'the right way,'
 and by dwelling on always having the perfect plan or strategy.
 
-Let's say I have an idea for a new SaaS product (everyone has one, I know).
+Let's say I have an idea for a new SaaS product (everyone has one, right?).
 I'm like, "ya know I think I'm on to something here". If you're not 100% ready to invest
 all of your time and energy into researching your target market, forming a "real" business
 plan over weeks or months, then maybe just spend a weekend fleshing out a prototype. Build
-the damn thing. Well, that is if that's in your skill set. Then  you'll have a very powerful,
+the damn thing. Well, that is if that's in your skill set. Then you'll have a very powerful,
 insightful, evidence-based tool at your disposal.
 
 I'm grinning and winking at you business intelligence folks. You'll have something tangible
@@ -86,7 +87,7 @@ I got my thoughts out, many of which I wouldn't have at all.
 
 Now, I can take what I've produced, iterate on it, improve, publish it, and move the hell
 on. To whomever reads this, it may be obvious that I didn't take much time
-to edit, format, or make it perfect-because it's not and won't be perfect. There's
+to edit, format, or make it perfect. It's not and won't be perfect. There's
 nothing wrong with that.
 
 What counts, is that I have something to work with, to keep, to share,
