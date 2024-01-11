@@ -14,11 +14,7 @@
  * Brett
  */
 
-
-
-/**
-  Content
- */
+/** Content */
 const content = {
     pres1: [
         'My website has hidden easter eggs throughout it!',
@@ -28,16 +24,11 @@ const content = {
     ]
 }
 
-
-
-/*
- * Misc Utils
-*/
+/** Misc Utils */
 
 const utils = {
     // Returns a Promise that resolves after "ms" Milliseconds
     timer: ms => new Promise(res => setTimeout(res, ms)),
-
 }
 
 /** Dom and browser specific utils */
@@ -108,16 +99,25 @@ const landingPage = {
         let egg = easterEggElements.headerSoftwareEngineer()            // egg 1
         let eggPres1 = easterEggElements.eggGameInit()                  // presentation 1
         let playerInitButton = easterEggElements.playerInitButton()    // accept egg 1 button
+        playerInitButton.style.display = 'none'
+
 
         // This all is only for egg 1 on the landing page,
         // so the trick will be to elegantly apply a pattern to
         // different egg target types, actions, triggered etc.
 
+        // Egg is clicked
         egg.addEventListener('click', () => {
 
+            // @devMode
+            settings.devMode = false
+            if (dom.storGet('egg_1') && !settings.devMode) {
+                return;
+            }
+
             egg.id = 'landing_1_active'
-            eggHandler.setEgg(egg, settings.DNA)
-            eggHandler.storeEgg(1, egg.getAttribute('eggId'))
+            eggHandler.setEgg(egg, settings.DNA)                // sets egg's egg ID (it's strand)'
+            eggHandler.storeEgg(1, egg.getAttribute('eggId'))   // store egg 1 and id in localstorage
             eggPres1.id = 'egg-game-init-show'
 
             // Landing scrambler thing :)
@@ -125,10 +125,14 @@ const landingPage = {
 
             setInterval(() => {
                 let text = egg.innerHTML
+
                 count  > text.length ? count = 0 : count += 1
+
                 egg.id === 'landing_1_active' ? egg.innerHTML = scrambler(text, count) : false
+
             },100)
 
+            // Render presentation
             // TODO: Do all this in one iteration of the lines area for Egg 1 Presentation
             let line1 = dom.byId('pres1-line1')
             let line2 = dom.byId('pres1-line2')
@@ -157,10 +161,12 @@ const landingPage = {
                     line4.innerHTML += contentLine4[i]
                     await utils.timer(50);
                 }
+                // Only render the bottom button after text is printed
+                playerInitButton.style.display = "inline"
+                playerInitButton.style.opacity = '0.7'
             }
 
             writer()
-
 
         }, false)
 
@@ -171,6 +177,7 @@ const landingPage = {
             }
             egg.innerHTML = 'Software Engineer'
             egg.id = 'landing_1_inactive'
+            egg.classList.add('egg-complete')
             eggPres1.id = 'egg-game-init-hide'
 
         }, false)
