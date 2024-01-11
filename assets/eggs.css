@@ -1,27 +1,10 @@
-/*.wrapper-main {
+.wrapper-main {
     margin-top: -25px;
-}*/
-
+}
 
 .header-tagline {
     padding: 5px;
     border-radius: 5px;
-}
-
-#landing_1_inactive.egg-complete:hover,
-#landing_1_active:hover {
-    cursor: arrow;
-}
-
-
-/*
- * TODO, because it's maddening
- * #landing_1_inactive:hover {
-    cursor: help;
-}*/
-
-.player-init {
-    opacity: 0;
 }
 
 /*  Note: these show/hide transitions to
@@ -50,8 +33,13 @@
     font-size: 1.5rem;
     background-color: #000;
     color: #008fcc;
-    opacity: 0;
     visibility: none;
+    opacity: 0.5;
+}
+
+.presentation button:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 
 #egg-game-init-show {
@@ -63,7 +51,7 @@
 }
 
 #egg-game-init-hide {
-    transition: opacity height font-size ease 60ms;
+    transition: opacity min-height font-size ease 60ms;
     transition-duration: 1s;
     font-size: 0px;
     opacity: 0;

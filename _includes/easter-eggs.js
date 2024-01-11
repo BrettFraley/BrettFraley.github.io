@@ -102,13 +102,18 @@ let bf_egg_game = {
 
 const landingPage = {
 
-
     // On init, need to know which if any/which eggs have already been found or not,
     // as to not add events to them
 
     // Pseudo: If storage get game.. extract player data, extract
 
     init: () => {
+
+        // @devMode - this makes it easy to test on refresh, clearing localStorage
+        if (settings.devMode) {
+            localStorage.removeItem('bf_egg_game')
+        }
+
         let egg = easterEggElements.headerSoftwareEngineer()            // egg 1
         let eggPres1 = easterEggElements.eggGameInit()                  // presentation 1
         let playerInitButton = easterEggElements.playerInitButton()    // accept egg 1 button
@@ -124,13 +129,13 @@ const landingPage = {
 
             // @devMode
             settings.devMode = false
-            if (dom.storGet('egg_1') && !settings.devMode) {
+            if (dom.storGet('bf_egg_game') && !settings.devMode) {
                 return;
             }
 
             egg.id = 'landing_1_active'                         // here egg is the HTML target element, not data
             eggHandler.setEgg(egg, settings.DNA)                // sets egg's egg ID (it's strand)'
-            eggHandler.storeEgg(1, egg.getAttribute('eggId'))   // store egg 1 and id in localstorage
+
             eggPres1.id = 'egg-game-init-show'
 
             // Player storage setup
@@ -152,7 +157,7 @@ const landingPage = {
             bf_egg_game.egg1Id = eggId // should just assign this above
             bf_egg_game.eggs.push({ name: 'egg_1',eggId: eggId })
 
-            dom.storSet('game', JSON.stringify(bf_egg_game))
+            dom.storSet('bf_egg_game', JSON.stringify(bf_egg_game))
 
             let testData = JSON.parse(dom.storGet('game'))
 
@@ -171,38 +176,25 @@ const landingPage = {
 
             },100)
 
-            // Render presentation
-            // TODO: Do all this in one iteration of the lines area for Egg 1 Presentation
-            let line1 = dom.byId('pres1-line1')
-            let line2 = dom.byId('pres1-line2')
-            let line3 = dom.byId('pres1-line3')
-            let line4 = dom.byId('pres1-line4')
+            // Render presentation - This write the text on the screen like it's
+            // being printed out kind of thing.
 
-            let contentLine1 = content.pres1[0].split("")
-            let contentLine2 = content.pres1[1].split("")
-            let contentLine3 = content.pres1[2].split("")
-            let contentLine4 = content.pres1[3].split("")
-
+            // note: this function could now accept a list of content strings,
+            //       and a list of element ids, or target elements
             async function writer() {
-                for (var i = 0; i < contentLine1.length; i++) {
-                    line1.innerHTML += contentLine1[i]
-                    await utils.timer(50);
-                }
-                for (var i = 0; i < contentLine2.length; i++) {
-                    line2.innerHTML += contentLine2[i]
-                    await utils.timer(50);
-                }
-                for (var i = 0; i < contentLine3.length; i++) {
-                    line3.innerHTML += contentLine3[i]
-                    await utils.timer(50);
-                }
-                for (var i = 0; i < contentLine4.length; i++) {
-                    line4.innerHTML += contentLine4[i]
-                    await utils.timer(50);
+
+                for (let i = 0; i < content.pres1.length; i++) {
+
+                    let el = dom.byId(`pres1-line${i+1}`)
+                    let line = content.pres1[i].split("")
+
+                    for (let j = 0; j < line.length; j++) {
+                        el.innerHTML += line[j]
+                        await utils.timer(50);
+                    }
                 }
                 // Only render the bottom button after text is printed
                 playerInitButton.style.display = "inline"
-                playerInitButton.style.opacity = '0.7'
             }
 
             writer()
@@ -224,13 +216,6 @@ const landingPage = {
 
         }, false)
     },
-
-    // player: {
-    //     eggsFound: 0,
-    // }
-
-
-
 
 }
 

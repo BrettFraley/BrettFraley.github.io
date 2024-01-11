@@ -4,7 +4,7 @@
     let playerId = document.getElementById('player-id')
     let playerEggs = document.getElementById('player-eggs')
 
-    let game = JSON.parse(localStorage.getItem('game'))
+    let game = JSON.parse(localStorage.getItem('bf_egg_game'))
     console.log(game)
     let eggs = game.eggs
     console.log(eggs)
