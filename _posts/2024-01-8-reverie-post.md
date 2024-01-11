@@ -2,7 +2,7 @@
 layout: post
 title: Fastest, Easiest, No BS Github Blog Setup!
 subtitle: On The Reverie Jekyll Theme, Github Pages
-categories: Web Development
+categories: [Web Development]
 ---
 
 Check it out, I'm a software engineer. I love to code, 
