@@ -90,10 +90,23 @@ const scrambler = (chars, count) => {
     return result.join("")
 }
 
+// Make me a class
+let bf_egg_game = {
+    player: {
+        id: '',
+        eggsFoundCount: 0,
+    },
+    egg1Id: '',
+    eggs: []
+}
+
 const landingPage = {
 
-    // On init, need to know which eggs have already been found or not,
+
+    // On init, need to know which if any/which eggs have already been found or not,
     // as to not add events to them
+
+    // Pseudo: If storage get game.. extract player data, extract
 
     init: () => {
         let egg = easterEggElements.headerSoftwareEngineer()            // egg 1
@@ -115,11 +128,37 @@ const landingPage = {
                 return;
             }
 
-            egg.id = 'landing_1_active'
+            egg.id = 'landing_1_active'                         // here egg is the HTML target element, not data
             eggHandler.setEgg(egg, settings.DNA)                // sets egg's egg ID (it's strand)'
             eggHandler.storeEgg(1, egg.getAttribute('eggId'))   // store egg 1 and id in localstorage
             eggPres1.id = 'egg-game-init-show'
 
+            // Player storage setup
+
+            // Okay they've found the first egg
+            // so we must initiate a game/player object
+            // in local storage for game state persistance
+            // This will all have to be revamped into something
+            // not so preocedural, but egg1 is the kickoff point here
+            // with this onclick ;)
+
+            // NOTE: this can/should only happen once,
+            // and all init code like this from the landing page,
+            // especially show/hide stuff shouldn't really need to exist'
+
+            let eggId = egg.getAttribute('eggId')
+            bf_egg_game.player.id = 'test'
+            bf_egg_game.eggsFoundCount += 1
+            bf_egg_game.egg1Id = eggId // should just assign this above
+            bf_egg_game.eggs.push({ name: 'egg_1',eggId: eggId })
+
+            dom.storSet('game', JSON.stringify(bf_egg_game))
+
+            let testData = JSON.parse(dom.storGet('game'))
+
+            console.table(testData)
+
+            //..................................................................
             // Landing scrambler thing :)
             let count = 0
 
@@ -171,6 +210,9 @@ const landingPage = {
         }, false)
 
         playerInitButton.addEventListener('click', () => {
+
+            // This is all UI style and show/hide state logic
+
             // @devMode
             if (!settings.devMode) {
                 playerInitButton.style.display = 'none'
@@ -183,14 +225,18 @@ const landingPage = {
         }, false)
     },
 
-    player: {
-        eggsFound: 0,
-    }
+    // player: {
+    //     eggsFound: 0,
+    // }
 
 
 
 
 }
+
+// TODO: Only call init if there is not a player.
+// Things needed outside of init, should be moved
+// outside of init.
 
 landingPage.init()
 
