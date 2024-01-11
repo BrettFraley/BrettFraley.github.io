@@ -5,9 +5,7 @@ title: DNA & RNA By ChatGPT
 categories: [Biology, Bioinformatics, Science, Genomics, ChatGPT]
 ---
 
-DISCLAIMER:
-
-This content was produced by ChatGPT and it's freaking amazing!
+DISCLAIMER: This content was produced by ChatGPT and it's freaking amazing!
 
 I will be building myself a special set of ChatGPT created articles
 mainly about biotech and bioinformatics.
