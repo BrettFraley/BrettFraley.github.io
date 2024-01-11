@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: Writing, On Writing
+title: Writing, On Writing & Doing
 categories: [Writing, Journal, Misc, Not So Nice Guides]
 ---
 
