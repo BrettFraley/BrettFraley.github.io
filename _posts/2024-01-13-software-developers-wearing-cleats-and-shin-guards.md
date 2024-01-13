@@ -22,7 +22,9 @@ of the game. They practice their skills individually and as a team
 in a game setting through scrimmages. 
 
 I could really dive deep into how each player's position has certain
-duties, and the team arranges themselves on the field in different patterns to carry out different strategies and plays. They play offense and defense, simoultaneously. I'll leave the comparisons to the business world, and particularly
+duties, and the team arranges themselves on the field in different patterns to carry out 
+strategies and plays. They play offense and defense, simoultaneously.
+I'll leave the comparisons to the business world, and particularly
 to software development teams up to your imagaination.
 
 So, what if software developers sat down alone or together 3 times
@@ -47,7 +49,7 @@ may be considered their shin guards? What comparisons could be made to dribbling
 ball, passing the ball, taking a shot at the goal, the goal being blocked by the goalie,
 or a point scored for the team? What may be considered a flag on play?
 
-Somehwere in this idea is the concept that there should be real set practice
+Somewhere in this idea is the concept that there should be real set practice
 time and game time in software engineering. You practice, strategize, thinking
 of the game ahead. Then come game day, you execute and strive to win.
 
@@ -59,7 +61,7 @@ and enough experience to know your position, teammates, the field, the opponent,
 the mere rules of the game?
 
 I will revisit this idea and come back, revise and really flesh out 
-a much more thorough comparison and organize the concepts around it.
-Real data and different takes on this idea could prove to be very interesting!
+a much more thorough comparison, and organize the concepts around it.
+Gathering real data and different takes on this idea could prove to be very interesting!
 
 *I did watch the movie Rudy last night, maybe that's what got me going about sports, dedication, and practice!*
