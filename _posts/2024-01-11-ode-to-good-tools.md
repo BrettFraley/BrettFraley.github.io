@@ -27,3 +27,11 @@ toolbox that have and probably always will withsatnd the test of time.
 
 Now, let's talk software!
 
+Going to discuss: 
+- Ubuntu, Lubuntu, Kali, Ubuntu Studio, Neuro Debian
+- Fossil SCM
+- Standard Notes
+- [Slap text editor](https://github.com/slap-editor/slap)
+- Tmux
+
+
