@@ -12,7 +12,7 @@ it gives me momentum to not stop after only learning a little. Choosing to write
 PDE's and produce something interesting and of value to others and perhaps even teach others
 what I currently know very little about, is my way of persevering to thoroughly study 
 and undertand PDEs and how to apply them in software solutions. I will be tackling this
-subject in this manner on many areas of study and will tag articles with the 'LearningAboutX'.
+subject in this manner on many areas of study and will tag such articles with 'LearningAboutX'.
 
 ### Day 1
 I was glancing through some free books on computer vision and the acronym PDE was mentioned. 
