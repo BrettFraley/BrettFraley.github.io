@@ -23,9 +23,9 @@ in a game setting through scrimmages.
 
 I could really dive deep into how each player's position has certain
 duties, and the team arranges themselves on the field in different patterns to carry out 
-strategies and plays. They play offense and defense, simoultaneously.
+strategies and plays. They play offense and defense, simultaneously.
 I'll leave the comparisons to the business world, and particularly
-to software development teams up to your imagaination.
+to software development teams up to your imagination.
 
 So, what if software developers sat down alone or together 3 times
 per week to actually have practice? In many cases they do to some extent,
@@ -37,7 +37,7 @@ Replace the sports equipment references with the tools and things
 a developer uses and may prepare before practice, and Imagine them
 saying, "I need to wash my practice jersey, find my other cleat,
 get my shin guards on, my ball, the practice cones, water bottle,
-snacks for my teamates and get to practice! We have a big game on saturday,
+snacks for my teammates and get to practice! We have a big game on saturday,
 it's a tournament!"
 
 Software folks are always learning and practicing new technologies.
