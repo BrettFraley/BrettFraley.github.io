@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Art | Design | Coloring Photos
 permalink: /art/
 ---
 
