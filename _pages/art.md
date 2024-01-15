@@ -8,5 +8,7 @@ permalink: /art/
 
 ###### (_yes, helps with anxiety and to get away from screens_)
 
+![Sample](../images/coloring-photos/collection-logo.png){:class="img-responsive"}
+
 My apologies, I'll be adding all my drawing, coloring, design, and art gallery here soon
 by the end of January.
