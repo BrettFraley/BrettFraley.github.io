@@ -1,0 +1,222 @@
+
+<style>
+    .table-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+    table {
+        width: 95;
+        margin: auto;
+    }
+    .color-block {
+        width: 125px;
+        height: 125px;
+    }
+
+    @media screen and (max-width: 650px) {
+        table {
+            font-size: x-small;
+        }
+        .color-block {
+            width: 60px;
+            height: 60px;
+        }
+    }
+</style>
+
+I asked ChatGPT to generate a list of 20, 5-color hexadecimal color schemes
+for a professional business or sales website. The response spit out a beautiful
+list in the format of:
+
+Primary: #3498db, Secondary: #2ecc71, Accent 1: #f39c12, Accent 2: #e74c3c, Accent 3: #95a5a6
+
+I decided to take the list and quickly create a visual of the color schemes.
+This then lead me to want to use Python to parse and clean the output and
+generate HTML/CSS output. The initial 20 color schemes are shown below.
+
+Doing this became fun and prompted me to want to make a more robust set of scripts
+to generate an HTML output. So, of course I created a repo.
+<https://github.com/BrettFraley/color-schemes-framework-via-ChatGPT>
+
+I plan to make the color scheme framework repo rather robust with options
+for outputting various types of HTML elements and layout using the color schemes,
+options to save and store the color schemes in a SQLite database, and UI tools
+to manipulate and work with color schemes in the browser!
+
+All in all, a simple ChatGPT prompt lead me down a path of creating something
+fun and hopefully useful to others. I'll be updating the repo, schemes, and options 
+and calling it complete by the end of January. I'll be posting links of 
+'color scheme pages' here on this page, and writing more about this fun little
+project.
+
+<div class="table-container">
+<table>
+    <tr>
+        <th>Primary</th>
+        <th>Secondary</th>
+        <th>Accent 1</th>
+        <th>Accent 2</th>
+        <th>Accent 3</th>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #3498db'></div></td>
+        <td><div class='color-block' style = 'background-color: #2ecc71'></div></td>
+        <td><div class='color-block' style = 'background-color: #f39c12'></div></td>
+        <td><div class='color-block' style = 'background-color: #e74c3c'></div></td>
+        <td><div class='color-block' style = 'background-color: #95a5a6'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #27ae60'></div></td>
+        <td><div class='color-block' style = 'background-color: #34495e'></div></td>
+        <td><div class='color-block' style = 'background-color: #e67e22'></div></td>
+        <td><div class='color-block' style = 'background-color: #c0392b'></div></td>
+        <td><div class='color-block' style = 'background-color: #3498db'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #1abc9c'></div></td>
+        <td><div class='color-block' style = 'background-color: #2c3e50'></div></td>
+        <td><div class='color-block' style = 'background-color: #f39c12'></div></td>
+        <td><div class='color-block' style = 'background-color: #e74c3c'></div></td>
+        <td><div class='color-block' style = 'background-color: #3498db'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #9b59b6'></div></td>
+        <td><div class='color-block' style = 'background-color: #16a085'></div></td>
+        <td><div class='color-block' style = 'background-color: #e67e22'></div></td>
+        <td><div class='color-block' style = 'background-color: #c0392b'></div></td>
+        <td><div class='color-block' style = 'background-color: #2c3e50'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #3498db'></div></td>
+        <td><div class='color-block' style = 'background-color: #2ecc71'></div></td>
+        <td><div class='color-block' style = 'background-color: #f39c12'></div></td>
+        <td><div class='color-block' style = 'background-color: #e74c3c'></div></td>
+        <td><div class='color-block' style = 'background-color: #1abc9c'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #27ae60'></div></td>
+        <td><div class='color-block' style = 'background-color: #34495e'></div></td>
+        <td><div class='color-block' style = 'background-color: #e67e22'></div></td>
+        <td><div class='color-block' style = 'background-color: #c0392b'></div></td>
+        <td><div class='color-block' style = 'background-color: #9b59b6'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #1abc9c'></div></td>
+        <td><div class='color-block' style = 'background-color: #2c3e50'></div></td>
+        <td><div class='color-block' style = 'background-color: #f39c12'></div></td>
+        <td><div class='color-block' style = 'background-color: #e74c3c'></div></td>
+        <td><div class='color-block' style = 'background-color: #27ae60'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #3498db'></div></td>
+        <td><div class='color-block' style = 'background-color: #2ecc71'></div></td>
+        <td><div class='color-block' style = 'background-color: #f39c12'></div></td>
+        <td><div class='color-block' style = 'background-color: #e74c3c'></div></td>
+        <td><div class='color-block' style = 'background-color: #8e44ad'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #27ae60'></div></td>
+        <td><div class='color-block' style = 'background-color: #34495e'></div></td>
+        <td><div class='color-block' style = 'background-color: #e67e22'></div></td>
+        <td><div class='color-block' style = 'background-color: #c0392b'></div></td>
+        <td><div class='color-block' style = 'background-color: #9b59b6'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #1abc9c'></div></td>
+        <td><div class='color-block' style = 'background-color: #2c3e50'></div></td>
+        <td><div class='color-block' style = 'background-color: #f39c12'></div></td>
+        <td><div class='color-block' style = 'background-color: #e74c3c'></div></td>
+        <td><div class='color-block' style = 'background-color: #3498db'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #9b59b6'></div></td>
+        <td><div class='color-block' style = 'background-color: #16a085'></div></td>
+        <td><div class='color-block' style = 'background-color: #e67e22'></div></td>
+        <td><div class='color-block' style = 'background-color: #c0392b'></div></td>
+        <td><div class='color-block' style = 'background-color: #27ae60'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #3498db'></div></td>
+        <td><div class='color-block' style = 'background-color: #2ecc71'></div></td>
+        <td><div class='color-block' style = 'background-color: #f39c12'></div></td>
+        <td><div class='color-block' style = 'background-color: #e74c3c'></div></td>
+        <td><div class='color-block' style = 'background-color: #1abc9c'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #27ae60'></div></td>
+        <td><div class='color-block' style = 'background-color: #34495e'></div></td>
+        <td><div class='color-block' style = 'background-color: #e67e22'></div></td>
+        <td><div class='color-block' style = 'background-color: #c0392b'></div></td>
+        <td><div class='color-block' style = 'background-color: #9b59b6'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #1abc9c'></div></td>
+        <td><div class='color-block' style = 'background-color: #2c3e50'></div></td>
+        <td><div class='color-block' style = 'background-color: #f39c12'></div></td>
+        <td><div class='color-block' style = 'background-color: #e74c3c'></div></td>
+        <td><div class='color-block' style = 'background-color: #27ae60'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #3498db'></div></td>
+        <td><div class='color-block' style = 'background-color: #2ecc71'></div></td>
+        <td><div class='color-block' style = 'background-color: #f39c12'></div></td>
+        <td><div class='color-block' style = 'background-color: #e74c3c'></div></td>
+        <td><div class='color-block' style = 'background-color: #8e44ad'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #27ae60'></div></td>
+        <td><div class='color-block' style = 'background-color: #34495e'></div></td>
+        <td><div class='color-block' style = 'background-color: #e67e22'></div></td>
+        <td><div class='color-block' style = 'background-color: #c0392b'></div></td>
+        <td><div class='color-block' style = 'background-color: #3498db'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #1abc9c'></div></td>
+        <td><div class='color-block' style = 'background-color: #2c3e50'></div></td>
+        <td><div class='color-block' style = 'background-color: #f39c12'></div></td>
+        <td><div class='color-block' style = 'background-color: #e74c3c'></div></td>
+        <td><div class='color-block' style = 'background-color: #9b59b6'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #9b59b6'></div></td>
+        <td><div class='color-block' style = 'background-color: #16a085'></div></td>
+        <td><div class='color-block' style = 'background-color: #e67e22'></div></td>
+        <td><div class='color-block' style = 'background-color: #c0392b'></div></td>
+        <td><div class='color-block' style = 'background-color: #27ae60'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #3498db'></div></td>
+        <td><div class='color-block' style = 'background-color: #2ecc71'></div></td>
+        <td><div class='color-block' style = 'background-color: #f39c12'></div></td>
+        <td><div class='color-block' style = 'background-color: #e74c3c'></div></td>
+        <td><div class='color-block' style = 'background-color: #1abc9c'></div></td>
+    </tr>
+
+    <tr>
+        <td><div class='color-block' style = 'background-color: #27ae60'></div></td>
+        <td><div class='color-block' style = 'background-color: #34495e'></div></td>
+        <td><div class='color-block' style = 'background-color: #e67e22'></div></td>
+        <td><div class='color-block' style = 'background-color: #c0392b'></div></td>
+        <td><div class='color-block' style = 'background-color: #9b59b6'></div></td>
+    </tr>
+</table>
+</div>
