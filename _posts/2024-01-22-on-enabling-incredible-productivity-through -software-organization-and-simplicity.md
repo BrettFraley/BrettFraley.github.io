@@ -1,15 +1,12 @@
 On Enabling Incredible Productivity Through Software, Organization, & Simplicity (KISS)
 
 ### Introduction
-This article is about being productive, making progress that counts, completing tasks and projects,
-finishing that next course, reading that next book. It isn't advice on setting or reaching goals. 
-It is about identifying what works for you or an organization to enable the ability to reach goals.
-It is about clearing the path from obstacles and then upgrading your mode of transport along said path.
+This article is about being productive, making progress that counts, completing tasks, projects, and finishing that next course or reading that next book. It isn't advice on setting or reaching goals. 
+It is about identifying what works for you or your organization to enable and optimize the ability to reach heightened levels of productivity. It is about clearing the path from obstacles and then upgrading your mode of transport along said path.
 
-The first half is the sections on drive and passion, and lost notes. The second half is for anyone who uses software daily in their career, creative, or hobby work (which is practically everyone!)
+The first half is the sections Clutter Out | Incredible Productivity In, The Need For Drive & Passion Amongst Mere Lists, and The Turbulent Sea of Lost Notes In Bottles.
 
-It is about becoming incredibly productive and organized through
-software. It is also a bit of a personal retrospective on simplicity, good concise tools, and tips for software engineers.
+The second half is for anyone who uses software daily in their career, creative projects, and school or hobby work, which is practically everyone! Becoming incredibly productive and organized through software doesn't mean a separate tool or service for every job. I write about digital simplicity, good tools, tips for software engineers, and customizing your daily use of software in ways that may bring joy and peace of mind to your work. ***Note: I will be posting a more thorough standalone article on this topic, open source, Linux, and the arsenal of some lesser known software development tools I recommend and will link to it here and on my website once complete - @TODO! :)***
 
 As of this writing, we are 3 weeks into the month of January 2024.
 Goals, tasks, notes, schedules, emails, browser tabs, diagrams, charts, and ideas abound!
@@ -38,7 +35,7 @@ To guide myself along, I'll first break down my thoughts into a concise list! Wh
 
 __Lesson 1:__ Screw the list because I risk getting stuck in the middle of one of the sections and not moving onto the next until tomorrow, and tomorrow I can and should be working on something else!
 
-### The Need For Drive & Passion Amongst Lists of Tasks
+### The Need For Drive & Passion Amongst Mere Lists
 
 It's difficult to be inspired by mundane tasks. Either eliminate those tasks, automate them, or push through them
 in light of the greater end goal or the purpose of the task. Drive and passion for reaching a desired outcome can't
@@ -64,3 +61,51 @@ If I have a list of 20 household chores to do, I could easily spend 20 minutes (
 Imagine the list is on a phone's todo app, a personal scrum board, on a cloud provider's site where there's a needed software update, on local project planning software which of course the reset my password link isn't working! In that time, you can bet
 that I'll already have the dishes done, the lawn mowed, and reading the next chapter of a book!
 
+### Software Tools, Productivity, Organization
+
+This section is written in a 'stream of consciousness outlined list style' because otherwise it would never be posted. Note: Whether Windows, Mac, or Linux user, there's information applicable to everyone here, and will not be writing this as if it were a tutorial or technical documentation. 
+
+Before diving into categorizing these notes, here are some practices I've found valuable to my own organization and productivity on my computer(s).
+
+#### For Everyone
+
+___Simple, Basic Folder Organization___
+- Any document that is not part of a code repository, an ebook or pdf, or belong to another logical directory, gets stored in Documents. It's the same for the Downloads folder. If it's a download then it goes in downloads until moved accordingly as needed.
+- I keep my Desktop almost empty other than the top 3-5 applications
+I use where I tend to actual click desktop icons to launch it.
+- Folder shortcuts on my Desktop include ARCHIVE-ME, ORGANIZE-ME, Screenshots-[the current month and year], where every month the screenshots folder gets moved to ALL-SCREENSHOTS and a new one for the month is created on the desktop. Pro-tip: this can be automated.
+- If you're wondering what's up with the ALL-CAPS folder naming, this is how I name what I'd consider 'main parent directories' as if an aisle in a grocery store. I only need and want a few main places things can be. That way, by following a pattern and never think about where a file should reside or is at on my machine.
+- I also keep a folder on the desktop named BOOKS-2024, and accordingly for each year. I download and put all books in there, simple.
+
+*** Web Browsers***
+
+
+Notes, Lists, Ideas, Brainstorms
+
+BrainDump.ms
+- I keep a single file .txt or .md document in ~/Documents named
+BrainDump-[Month-Year], but then I ended up having 12 BrainDump 
+files per year. Over 6-7 years of doping this, there is no going back that far, rehashing lists, todos, notes, etc. None of that worth keeping should be left in the archives of the old BrainDumps, ya know? So, now I keep a single file and update it almost daily, 
+usually deleting a lot of it's contents because I don't need it or 
+I have moved whatever it is to somewhere relavent.
+
+TasksLog.md
+- TasksLog is a one file journal that is literally like a captains
+log of only actions I took related to installing, using, or setting up some software on my machine. I go back to this as a reference for
+when I'm setting up[ a new virtual machine, docker image, etc. It has entries that are simply like:
+- installed xyz at version 123 to try it. It's super cool, and NOTE: in order to set the config add: `some elusive undocumented command I never will ever have to dig across the internets for again that seemingly only exists on Jim's blog from 2006!`
+
+Okay, let's see. There's BrainDump.md, TasksLog.md, and for more categorized organization for personal project management, on Ubuntu I use an open source application called Standard Notes! I've tried a ton and highly recommend it.
+
+- This needs to go at the top of the software developer section.
+Even if you're on a Mac, and if on Windows even though they've come along way as far as developer friendly operating system, please jsut install via dual boot (recommended) or in Virtual Box, or on a USB stick ***some*** Linux distribution. Linux Mint or Ubuntu will run incredibly fast on your modern laptop[ that Windows has bogged down and VSCode seems to somehow still lag on 16gm ram or more.] More so, Learn Linux, learn Bash, learn Git (not just Github Desktop) or SCM tools in your IDE of choice.
+
+I'll be writing a huge list of lesser known applications I use on Ubuntu that are incredibly well done, useful, and interesting tools and software projects themselves.
+
+I'm leaving the rest of anything open source / Linux based rant to include in posts on my website.
+
+
+Software Development
+- For software work on my personal machine I simply have a ~/dev directory for my own projects. Then a directory named ~/dev-learn for trying out the latest greatest, following guides, and throwaway git repos. This is because I don't want to clutter my ~/dev directory with 100 clones and forks over time because that becomes a mess, and it only takes one rogue noe_modules, .env, .gemfile. dockerfile..etc to make it into the wrong place and that can make for a bad day when you're trying to spin up something you haven't started locally for 3 months and xyz library globally installed package abc...etc. Speaking of, if this resonates with you or not, see the next item!
+- It's 2024! Calling all software engineers! You no longer need to use or manage virtualenv or venv directly! Same for NodeJS and NPM. To manage your JS and Python project environments going forward, use Pipenv and NVM. I';m not even providing links. If this is news to you, leave this article now, google both, get them installed and your life as a developer just got an order of magnitude easier and more organized :)
+-
