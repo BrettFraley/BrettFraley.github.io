@@ -1,10 +1,10 @@
-On Enabling Incredible Productivity Through Software, Organization, & Simplicity (KISS)
 
 ### Introduction
-This article is about being productive, making progress that counts, completing tasks, projects, and finishing that next course or reading that next book. It isn't advice on setting or reaching goals. 
-It is about identifying what works for you or your organization to enable and optimize the ability to reach heightened levels of productivity. It is about clearing the path from obstacles and then upgrading your mode of transport along said path.
+This article is about being productive, making progress that counts, completing tasks, projects, and finishing that next course or reading that next book. 
 
-The first half is the sections Clutter Out | Incredible Productivity In, The Need For Drive & Passion Amongst Mere Lists, and The Turbulent Sea of Lost Notes In Bottles.
+It isn't advice on setting or reaching goals. It is about identifying what works for you or your organization to enable and optimize the ability to reach heightened levels of productivity. It is about clearing the path from obstacles and then upgrading your mode of transport along said path.
+
+The first half is the sections Clutter Out - Incredible Productivity In, The Need For Drive & Passion Amongst Mere Lists, and The Turbulent Sea of Lost Notes In Bottles.
 
 The second half is for anyone who uses software daily in their career, creative projects, and school or hobby work, which is practically everyone! Becoming incredibly productive and organized through software doesn't mean a separate tool or service for every job. I write about digital simplicity, good tools, tips for software engineers, and customizing your daily use of software in ways that may bring joy and peace of mind to your work. ***Note: I will be posting a more thorough standalone article on this topic, open source, Linux, and the arsenal of some lesser known software development tools I recommend and will link to it here and on my website once complete - @TODO! :)***
 
