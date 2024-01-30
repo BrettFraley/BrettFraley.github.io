@@ -22,7 +22,7 @@ and white brain matter of individuals and entire organizations.
 Before I dive into hyper-productivity, software, simplicity, and automation, below is a quote from the following source on 'white brain matter': https://www.medicalnewstoday.com/articles/318966
 
 "
-***One study [Trusted Source](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1859842/), for instance, found a relationship between white matter structure and IQ, the authors of which concluded that “cognitive function correlates with greater fiber organization.” Similarly, other scientistsTrusted Source have found links between the quality of white matter in an adult’s brain and their reading ability.***
+***One study [Trusted Source](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1859842/), for instance, found a relationship between white matter structure and IQ, the authors of which concluded that “cognitive function correlates with greater fiber organization.” Similarly, [other scientists](https://www.ncbi.nlm.nih.gov/pubmed/10719902) have found links between the quality of white matter in an adult’s brain and their reading ability.***
 
 ***Researchers have also demonstrated that using our brains in a specific way can change the structure of white matter. For instance, one experiment found that regularly practicing a musical instrument increases the level of organization within white matter in the areas important for musical performance. The researchers showed that the amount of change was proportional to the number of hours the individual practiced. The more you work, the more white matter is modified.***
 "
